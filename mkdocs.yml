@@ -7,3 +7,6 @@ theme:
   name: 'material'
 
 site_name: Verinode Documentation
+
+extra_css:
+  - css/extra.css
