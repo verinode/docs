@@ -1,12 +1,25 @@
-
-nav:
-  - Home: index.md
-  - About: about.md
-
 theme:
   name: 'material'
 
-site_name: Verinode Documentation
+site_name: Verinode
 
 extra_css:
   - css/extra.css
+
+favicon: img/favicon.ico
+
+nav:
+  - Home: index.md
+  - Our Oracle: about.md
+  - Chainlink Adapters:
+      - Alpha Vantage: chainlink-adapters/alpha-vantage.md
+      - Asset Price External Adaptor: chainlink-adapters/asset-price-external-adaptor.md
+      - CoinAPI.io Python 3.x External Adapter: chainlink-adapters/coinAPI.io-python-3.x-external-adapter.md
+      - CoinMarketCap External Adapter: chainlink-adapters/coinmarketcap-external-adapter.md
+      - CryptoCompare External Adapter: chainlink-adapters/cryptocompare-external-adapter.md
+      - General JSONRPC External Adapter: chainlink-adapters/cryptocompare-external-adapter.md
+      - Mistertango External Adapter: chainlink-adapters/mistertango-external-adapter.md
+      - Secure Data Links Open Weather Adaptor: chainlink-adapters/secure-data-links-open-weather-adaptor.md
+      - PayPal External Adapter: chainlink-adapters/paypal-external-adapter.md
+      - Chainlink External Adapter for writing to Ethereum-based Blockchains: chainlink-adapters/chainlink-external-adapter-for-writing-to-ethereum-based-blockchains.md
+      - XML to JSON CL Adaptor: chainlink-adapters/XML-to-JSON-cl-adaptor.md
