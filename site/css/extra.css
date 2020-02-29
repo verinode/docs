@@ -1,0 +1,20 @@
+
+.md-header  {
+    background-color: rgb(16, 39, 69);
+    box-shadow: rgb(16, 39, 69);
+}
+.md-header[data-md-state=shadow] {
+    box-shadow: none;
+}
+.md-footer-nav {
+    background: rgba(31,65,107,1);
+}
+.md-footer-meta {
+    background-color: rgb(16, 39, 69);
+}
+.md-typeset a, .md-nav__link--active, .md-nav__link:active {
+    color: #37ECB0;
+}
+
+
+

@@ -1,0 +1,951 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Mistertango External Adapter - Verinode</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#mistertango-external-adapter" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Verinode" aria-label="Verinode" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Verinode
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Mistertango External Adapter
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Verinode" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Verinode
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="Our Oracle" class="md-nav__link">
+      Our Oracle
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Chainlink Adapters
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Chainlink Adapters
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../alpha-vantage/" title="Alpha Vantage" class="md-nav__link">
+      Alpha Vantage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../asset-price-external-adaptor/" title="Asset Price External Adaptor" class="md-nav__link">
+      Asset Price External Adaptor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coinAPI.io-python-3.x-external-adapter/" title="CoinAPI.io Python 3.x External Adapter" class="md-nav__link">
+      CoinAPI.io Python 3.x External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coinmarketcap-external-adapter/" title="CoinMarketCap External Adapter" class="md-nav__link">
+      CoinMarketCap External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cryptocompare-external-adapter/" title="CryptoCompare External Adapter" class="md-nav__link">
+      CryptoCompare External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cryptocompare-external-adapter/" title="General JSONRPC External Adapter" class="md-nav__link">
+      General JSONRPC External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mistertango External Adapter
+      </label>
+    
+    <a href="./" title="Mistertango External Adapter" class="md-nav__link md-nav__link--active">
+      Mistertango External Adapter
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    Available methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getbalance" class="md-nav__link">
+    getBalance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistgetlist3" class="md-nav__link">
+    getList/getList3
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendmoney" class="md-nav__link">
+    sendMoney
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_2" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    Disclaimer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../secure-data-links-open-weather-adaptor/" title="Secure Data Links Open Weather Adaptor" class="md-nav__link">
+      Secure Data Links Open Weather Adaptor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../paypal-external-adapter/" title="PayPal External Adapter" class="md-nav__link">
+      PayPal External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chainlink-external-adapter-for-writing-to-ethereum-based-blockchains/" title="Chainlink External Adapter for writing to Ethereum-based Blockchains" class="md-nav__link">
+      Chainlink External Adapter for writing to Ethereum-based Blockchains
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../XML-to-JSON-cl-adaptor/" title="XML to JSON CL Adaptor" class="md-nav__link">
+      XML to JSON CL Adaptor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    Available methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getbalance" class="md-nav__link">
+    getBalance
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getlistgetlist3" class="md-nav__link">
+    getList/getList3
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sendmoney" class="md-nav__link">
+    sendMoney
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_2" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    Disclaimer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="mistertango-external-adapter">Mistertango External Adapter</h1>
+<h2 id="how-to-use">How to use</h2>
+<ul>
+<li>
+<p>Install dependencies <code>npm install</code></p>
+</li>
+<li>
+<p>Set up <a href="#environment-variables">Environment variables</a></p>
+</li>
+<li>
+<p><em>Optional:</em> Run tests <code>npm test</code></p>
+</li>
+<li>
+<p>Run <code>createRequest()</code> in one of the following ways:</p>
+<ul>
+<li>call it directly</li>
+<li>use the <code>handler()</code> wrapper for AWS Lambda</li>
+<li>use the <code>gcpservice()</code> wrapper for GCP</li>
+</ul>
+</li>
+<li>
+<p>Use one of the available <a href="#available-methods">Available methods</a></p>
+<ul>
+<li>Set method name in <code>data.method</code>, along with method-specific parameters</li>
+</ul>
+</li>
+</ul>
+<p>To create a ZIP file to upload to AWS/GCP, run:</p>
+<pre><code class="bash">zip -r cl-ea.zip .
+</code></pre>
+
+<h2 id="environment-variables">Environment variables</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th align="center"></th>
+<th>Description</th>
+<th align="center">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>API_KEY</code></td>
+<td align="center"><strong>Required</strong></td>
+<td>API key of the user. See <a href="https://bank.mistertango.com/profile/settings">Mistertango Settings</a></td>
+<td align="center"><code>e6ab820c-ad73-4f6c-9a39-8978a26b506a</code></td>
+</tr>
+<tr>
+<td><code>API_SECRET</code></td>
+<td align="center"><strong>Required</strong></td>
+<td>API secret of the user. See <a href="https://bank.mistertango.com/profile/settings">Mistertango Settings</a></td>
+<td align="center"><code>2a8f2e4e3b7e541</code></td>
+</tr>
+<tr>
+<td><code>API_USERNAME</code></td>
+<td align="center"><strong>Required</strong></td>
+<td>Email address of the Mistertango user</td>
+<td align="center"><code>you@example.com</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="available-methods">Available methods</h2>
+<h3 id="getbalance">getBalance</h3>
+<p>Get client balance for current or previous date</p>
+<h4 id="request">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>date</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Date for balance (current date, if skipped)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response">Response</h4>
+<pre><code class="json">{
+   &quot;status&quot;:true,
+   &quot;api&quot;:{
+      &quot;version&quot;:&quot;string&quot;,
+      &quot;title&quot;:&quot;string&quot;
+   },
+   &quot;message&quot;:&quot;string&quot;,
+   &quot;data&quot;:{
+      &quot;available_balance&quot;:0,
+      &quot;reservations&quot;:0,
+      &quot;real_balance&quot;:0
+   },
+   &quot;duration&quot;:0
+}
+</code></pre>
+
+<h3 id="getlistgetlist3">getList/getList3</h3>
+<p>Get transaction list for date or period, newest first, 100 transactions per call</p>
+<h4 id="request_1">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>dateFrom</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Start of period (week ago, if skipped)</td>
+</tr>
+<tr>
+<td><code>dateTill</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>End of period (current date, if skipped)</td>
+</tr>
+<tr>
+<td><code>page</code></td>
+<td>Integer</td>
+<td><em>Optional</em></td>
+<td>Page of transaction list in period (1, if skipped)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response_1">Response</h4>
+<pre><code class="json">{
+   &quot;status&quot;:true,
+   &quot;api&quot;:{
+      &quot;version&quot;:&quot;string&quot;,
+      &quot;title&quot;:&quot;string&quot;
+   },
+   &quot;message&quot;:&quot;string&quot;,
+   &quot;data&quot;:[
+      {
+         &quot;total&quot;:0,
+         &quot;account&quot;:{
+            &quot;balance&quot;:0,
+            &quot;balance_from&quot;:0,
+            &quot;balance_till&quot;:0,
+            &quot;incomes&quot;:0,
+            &quot;expenses&quot;:0
+         },
+         &quot;list&quot;:[
+            {
+               &quot;uuid&quot;:&quot;string&quot;,
+               &quot;other_side&quot;:&quot;string&quot;,
+               &quot;other_side_account&quot;:&quot;string&quot;,
+               &quot;direction&quot;:&quot;string&quot;,
+               &quot;amount&quot;:0,
+               &quot;fee&quot;:0,
+               &quot;comment&quot;:&quot;string&quot;,
+               &quot;status&quot;:&quot;string&quot;,
+               &quot;date&quot;:&quot;string&quot;,
+               &quot;type&quot;:&quot;string&quot;
+            }
+         ]
+      }
+   ],
+   &quot;duration&quot;:0
+}
+</code></pre>
+
+<h3 id="sendmoney">sendMoney</h3>
+<p>Send money to IBAN account</p>
+<h4 id="request_2">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>amount</code></td>
+<td>Double</td>
+<td><strong>Required</strong></td>
+<td>Amount of money</td>
+</tr>
+<tr>
+<td><code>recipient</code></td>
+<td>String</td>
+<td><strong>Required</strong></td>
+<td>Name of the recipient</td>
+</tr>
+<tr>
+<td><code>account</code></td>
+<td>String</td>
+<td><strong>Required</strong></td>
+<td>IBAN account number or Mistertango username</td>
+</tr>
+<tr>
+<td><code>details</code></td>
+<td>String</td>
+<td><strong>Required</strong></td>
+<td>Details (description) of the transfer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="response_2">Response</h4>
+<pre><code class="json">{
+   &quot;status&quot;:true,
+   &quot;api&quot;:{
+      &quot;version&quot;:&quot;string&quot;,
+      &quot;title&quot;:&quot;string&quot;
+   },
+   &quot;message&quot;:&quot;string&quot;,
+   &quot;data&quot;:&quot;string&quot;,
+   &quot;duration&quot;:0
+}
+</code></pre>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p>In order to use this adapter, you will need to create an account with and obtain credentials from Mistertango and agree to and comply with Mistertango’s applicable terms, conditions and policies.  In no event will SmartContract Chainlink Limited SEZC be liable for your or your user’s failure to comply with any or all of Mistertango’s terms, conditions or policies or any other applicable license terms.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../cryptocompare-external-adapter/" title="General JSONRPC External Adapter" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                General JSONRPC External Adapter
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../secure-data-links-open-weather-adaptor/" title="Secure Data Links Open Weather Adaptor" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Secure Data Links Open Weather Adaptor
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

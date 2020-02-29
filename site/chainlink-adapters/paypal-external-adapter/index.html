@@ -1,0 +1,915 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>PayPal External Adapter - Verinode</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#paypal-external-adapter" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../.." title="Verinode" aria-label="Verinode" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Verinode
+            </span>
+            <span class="md-header-nav__topic">
+              
+                PayPal External Adapter
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../.." title="Verinode" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Verinode
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../about/" title="Our Oracle" class="md-nav__link">
+      Our Oracle
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Chainlink Adapters
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Chainlink Adapters
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../alpha-vantage/" title="Alpha Vantage" class="md-nav__link">
+      Alpha Vantage
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../asset-price-external-adaptor/" title="Asset Price External Adaptor" class="md-nav__link">
+      Asset Price External Adaptor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coinAPI.io-python-3.x-external-adapter/" title="CoinAPI.io Python 3.x External Adapter" class="md-nav__link">
+      CoinAPI.io Python 3.x External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../coinmarketcap-external-adapter/" title="CoinMarketCap External Adapter" class="md-nav__link">
+      CoinMarketCap External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cryptocompare-external-adapter/" title="CryptoCompare External Adapter" class="md-nav__link">
+      CryptoCompare External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cryptocompare-external-adapter/" title="General JSONRPC External Adapter" class="md-nav__link">
+      General JSONRPC External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mistertango-external-adapter/" title="Mistertango External Adapter" class="md-nav__link">
+      Mistertango External Adapter
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../secure-data-links-open-weather-adaptor/" title="Secure Data Links Open Weather Adaptor" class="md-nav__link">
+      Secure Data Links Open Weather Adaptor
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        PayPal External Adapter
+      </label>
+    
+    <a href="./" title="PayPal External Adapter" class="md-nav__link md-nav__link--active">
+      PayPal External Adapter
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-with-docker" class="md-nav__link">
+    Run with Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    Available methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sendpayout" class="md-nav__link">
+    sendPayout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpayout" class="md-nav__link">
+    getPayout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    Disclaimer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chainlink-external-adapter-for-writing-to-ethereum-based-blockchains/" title="Chainlink External Adapter for writing to Ethereum-based Blockchains" class="md-nav__link">
+      Chainlink External Adapter for writing to Ethereum-based Blockchains
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../XML-to-JSON-cl-adaptor/" title="XML to JSON CL Adaptor" class="md-nav__link">
+      XML to JSON CL Adaptor
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    How to use
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-with-docker" class="md-nav__link">
+    Run with Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    Environment variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-methods" class="md-nav__link">
+    Available methods
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sendpayout" class="md-nav__link">
+    sendPayout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#getpayout" class="md-nav__link">
+    getPayout
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request_1" class="md-nav__link">
+    Request
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    Disclaimer
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="paypal-external-adapter">PayPal External Adapter</h1>
+<h2 id="how-to-use">How to use</h2>
+<ul>
+<li>
+<p>Install dependencies <code>yarn install</code></p>
+</li>
+<li>
+<p>Build TypeScript files <code>yarn build</code></p>
+</li>
+<li>
+<p>Set up <a href="#environment-variables">Environment variables</a></p>
+</li>
+<li>
+<p><em>Optional:</em> Run tests <code>yarn test</code>. Please read <a href="#testing">Testing</a> first!</p>
+</li>
+<li>
+<p>Run this adapter using a serverless provider:</p>
+<ul>
+<li>use the <code>handler()</code> wrapper for AWS Lambda</li>
+<li>use the <code>gcpservice()</code> wrapper for GCP</li>
+</ul>
+</li>
+<li>
+<p>Use one of the available <a href="#available-methods">Available methods</a></p>
+<ul>
+<li>Set method name in <code>data.method</code>, along with method-specific parameters</li>
+</ul>
+</li>
+</ul>
+<p>To create a ZIP file to upload to AWS/GCP, run:</p>
+<pre><code class="bash">zip -r cl-ea.zip .
+</code></pre>
+
+<h2 id="run-with-docker">Run with Docker</h2>
+<pre><code class="bash">docker build . -t paypal-adapter
+docker run -d \
+    -p 8080:8080 \
+    -e EA_PORT=8080 \
+    -e CLIENT_ID=&quot;Your_client_id&quot; \
+    -e CLIENT_SECRET=&quot;Your_client_secret&quot; \
+    paypal-adapter
+</code></pre>
+
+<h2 id="environment-variables">Environment variables</h2>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th align="center"></th>
+<th>Description</th>
+<th align="center">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MODE</code></td>
+<td align="center"><em>Optional</em></td>
+<td><code>LIVE</code> or <code>SANDBOX</code></td>
+<td align="center"><code>SANDBOX</code></td>
+</tr>
+<tr>
+<td><code>CLIENT_ID</code></td>
+<td align="center"><strong>Required</strong></td>
+<td>Your PayPal Client ID</td>
+<td align="center"><code>EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM</code></td>
+</tr>
+<tr>
+<td><code>CLIENT_SECRET</code></td>
+<td align="center"><strong>Required</strong></td>
+<td>Your PayPal Client Secret</td>
+<td align="center"><code>EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM</code></td>
+</tr>
+<tr>
+<td><code>API_METHOD</code></td>
+<td align="center"><em>Optional</em></td>
+<td>Set a specific method to use for this adapter. Overwrites <code>method</code> in request body.</td>
+<td align="center"><code>sendPayout</code></td>
+</tr>
+</tbody>
+</table>
+<p>To get PayPal developer credentials, please check out https://developer.paypal.com/.</p>
+<h2 id="testing">Testing</h2>
+<p>Before you start testing, make sure you have necessary PayPal developer credentials set up.
+Set the <code>MODE</code> env variable to <code>sandbox</code>.</p>
+<p>In order to test sending payouts, make sure your facilitator account is funded.
+Also make sure you are sending in the default currency of your account.
+Receiver should be your "buyer" account.
+These env vars can be set with <code>TEST_CURRENCY</code> and <code>TEST_RECEIVER</code>, as well as <code>TEST_AMOUNT</code>.</p>
+<p>To test the getPayout method with another payout other than the one created in the test, set the <code>TEST_PAYOUT_ID</code> env var.</p>
+<h2 id="available-methods">Available methods</h2>
+<p>Method can be specified by the <code>method</code> key in the request body or the <code>API_METHOD</code> environment variable. If the 
+environment variable is set, it takes precedence over the method specified in the request body.</p>
+<h3 id="sendpayout">sendPayout</h3>
+<p>Send a payout with the Payouts API.</p>
+<h4 id="request">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>amount</code></td>
+<td>Integer, decimal</td>
+<td><strong>Required</strong></td>
+<td>Amount to send. Please refer to the <a href="https://developer.paypal.com/docs/api/payments.payouts-batch/v1/#definition-currency">PayPal docs</a>.</td>
+</tr>
+<tr>
+<td><code>currency</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Three-character ISO-4217 currency code. Defaults to <code>USD</code>. Please refer to the <a href="https://developer.paypal.com/docs/integration/direct/rest/currency-codes/">full list of available currencies</a>.</td>
+</tr>
+<tr>
+<td><code>receiver</code></td>
+<td>String</td>
+<td><strong>Required</strong></td>
+<td>Receiver of the payout</td>
+</tr>
+<tr>
+<td><code>recipient_type</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>The type of <code>receiver</code>. Can be one of <code>EMAIL</code>, <code>PHONE</code> and <code>PAYPAL_ID</code>. Defaults to <code>EMAIL</code>.</td>
+</tr>
+<tr>
+<td><code>note</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Custom note for this payout</td>
+</tr>
+<tr>
+<td><code>sender_item_id</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Custom sender-specified ID for this payout</td>
+</tr>
+<tr>
+<td><code>email_subject</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Custom email subject for the payment notification</td>
+</tr>
+<tr>
+<td><code>email_message</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Custom email message for the payment notification</td>
+</tr>
+</tbody>
+</table>
+<p>Please refer to the PayPal docs for more information on each parameter: https://developer.paypal.com/docs/api/payments.payouts-batch/v1/#payouts_create</p>
+<h4 id="response">Response</h4>
+<pre><code class="json">{  
+  &quot;result&quot;:&quot;5UXD2E8A7EBQJ&quot;,
+   &quot;batch_header&quot;:{  
+      &quot;sender_batch_header&quot;:{  
+         &quot;sender_batch_id&quot;:&quot;Payouts_2018_100008&quot;,
+         &quot;email_subject&quot;:&quot;You have a payout!&quot;,
+         &quot;email_message&quot;:&quot;You have received a payout! Thanks for using our service!&quot;
+      },
+      &quot;payout_batch_id&quot;:&quot;5UXD2E8A7EBQJ&quot;,
+      &quot;batch_status&quot;:&quot;PENDING&quot;
+   }
+}
+</code></pre>
+
+<h3 id="getpayout">getPayout</h3>
+<p>Get details on a payout.</p>
+<h4 id="request_1">Request</h4>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td>String</td>
+<td><em>Optional</em></td>
+<td>Type of payout to look up. One of <code>ITEM</code> and <code>BATCH</code>. Defaults to <code>BATCH</code>.</td>
+</tr>
+<tr>
+<td><code>payout_id</code></td>
+<td>String</td>
+<td><strong>Required</strong></td>
+<td>Payout item ID to look up</td>
+</tr>
+</tbody>
+</table>
+<p>Please refer to the PayPal docs for more information on each parameter: https://developer.paypal.com/docs/api/payments.payouts-batch/v1/#payouts_create</p>
+<h4 id="response_1">Response</h4>
+<pre><code class="json">{  
+   &quot;result&quot;:&quot;5UXD2E8A7EBQJ&quot;,
+   &quot;batch_header&quot;:{  
+      &quot;sender_batch_header&quot;:{  
+         &quot;sender_batch_id&quot;:&quot;Payouts_2018_100008&quot;,
+         &quot;email_subject&quot;:&quot;You have a payout!&quot;,
+         &quot;email_message&quot;:&quot;You have received a payout! Thanks for using our service!&quot;
+      },
+      &quot;payout_batch_id&quot;:&quot;5UXD2E8A7EBQJ&quot;,
+      &quot;batch_status&quot;:&quot;PENDING&quot;
+   }
+}
+</code></pre>
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p>In order to use this adapter, you will need to create an account with and obtain credentials from PayPal and agree to and comply with PayPal’s applicable terms, conditions and policies.  In no event will SmartContract Chainlink Limited SEZC be liable for your or your user’s failure to comply with any or all of PayPal’s terms, conditions or policies or any other applicable license terms.</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../secure-data-links-open-weather-adaptor/" title="Secure Data Links Open Weather Adaptor" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Secure Data Links Open Weather Adaptor
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../chainlink-external-adapter-for-writing-to-ethereum-based-blockchains/" title="Chainlink External Adapter for writing to Ethereum-based Blockchains" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Chainlink External Adapter for writing to Ethereum-based Blockchains
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+    
+  </body>
+</html>

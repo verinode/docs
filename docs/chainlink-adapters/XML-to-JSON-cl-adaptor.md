@@ -2,7 +2,7 @@
 This adaptor allows for converting of XML API's into JSON. This allows ChainLink nodes to use API's which use XML as a markup. It's built in Go using [go-json-rest](https://github.com/ant0ine/go-json-rest).
 
 ## Dependencies
-To be able to run this external adaptor, you need [Docker](docker.com) installed.
+To be able to run this external adaptor, you need [Docker](http://www.docker.com) installed.
 
 ## Run the Adaptor
 This adaptor is published on the public docker hub, so you just need to run the two following commands:
